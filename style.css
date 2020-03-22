@@ -117,6 +117,7 @@ body {
 }
 
 .social a:hover i{
+    padding: 8px 16px 8px 10px;
     color: #00f120;
     display: block !important; 
 }
