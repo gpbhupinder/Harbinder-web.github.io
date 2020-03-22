@@ -100,35 +100,14 @@ body {
     width: 80px; 
     position: fixed; 
     z-index: 1;
-    top: 0;
-    left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     background-color: rgb(29, 29, 29); 
     overflow-x: hidden;
-    padding-top: 30px;
-    
-}
-
-.sidenav a {
-    padding: 8px 16px 8px 10px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: #797979;
-    display: block;
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
-}
-  
-.sidenav a:hover {
-    color: #00f120;
-}
-  
-.main {
-    margin-left: 160px; 
-    padding: 0px 10px;
 }
 
 .social {
-    margin-top: 200%;
+    margin-top: 90% !important;
     padding: 8px 16px 8px 10px;
     text-decoration: none;
     font-size: 0.8rem;
@@ -137,14 +116,63 @@ body {
     text-align: center;
 }
 
-.social a:hover {
+.social a:hover i{
     color: #00f120;
+    display: block !important; 
 }
+
+.sidenav a {
+    padding: 8px 16px 8px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #797979;
+    display: block;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+
+.sidenav ul {
+    z-index: 1;
+    background-color: rgb(29, 29, 29); 
+    overflow-x: hidden;
+    padding-top: 10px;
+    
+}
+.sidenav li{
+    display: block;
+}
+.sidenav li b{
+    display: none;
+}
+.sidenav a:hover b {
+    padding-top: 20px;
+    color: #00f120;
+    display: block;
+}
+.sidenav li a{
+    padding-top: 20px;
+    display: block;
+}
+
+.sidenav a:hover i {
+    display: none;
+}
+.active, .btn:hover {
+    color: #00f120;
+  }
+
+.main {
+    margin-left: 160px; 
+    padding: 0px 10px;
+}
+
+
 
 .brand { 
     text-decoration: none;
     position: relative;
-    margin-bottom: 80px;
+
     display:flex;
     align-items:center;
     justify-content: center;
