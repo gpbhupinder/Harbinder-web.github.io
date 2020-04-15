@@ -314,20 +314,28 @@ svg path{
 }
 
 /* Window */
-.window div {
+.window{
     position: absolute;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 500px;
     box-shadow: 1px 2px 5px rgba(0,0,0,.6);
-    width: 750px;
     max-width: 100%;
     background: var(--color-bg);
     color: var(--color-text);
+}
+
+.window div {
+    line-height: 1.5;
     font-size: 16px;
     font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
     border-radius: 4px;
-    padding: 60px 30px 20px;
+    padding: 20px;
     position: relative;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    color: #00f120;
+}
+
+.window div span{
+    color: #F44336;
 }

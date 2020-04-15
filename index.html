@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="termynal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
@@ -90,7 +91,12 @@
         </div>
         <div class="window">
             <div id="text">
-                Your Ip Address : <span class="ip"></span>
+                I Hacked you check your info below:
+                <br>
+                Your Ip Address : <span class="ip"></span><br>
+                Your ISP        : <span class="org"></span><br>
+                Your City       : <span class="city"></span><br>
+                Your Postal     : <span class="postal"></span>
             </div>
         </div>
     </div>
@@ -99,11 +105,11 @@
         $(document).ready(function() {
           $.getJSON("https://ipapi.co/json/", function(e) {
             $('.ip').text(e.ip);
-            $('.region').text(e.region);
+            $('.city').text(e.city);
             $('.org').text(e.org);
+            $('.postal').text(e.postal);
           });
         });
       </script>
-      
 </body>
 </html>
