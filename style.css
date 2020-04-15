@@ -265,8 +265,6 @@ svg path{
 }
 
 /*................ Button code*/
-  
-
 .appbuttons {
     /*overflow: hidden;*/
     margin-top: 428px;
@@ -315,62 +313,21 @@ svg path{
 }
 }
 
-
-/*...............*/
-h1{
-    font-size: 5.3vw;
-    font-weight:bold;
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  .btn {
-    background-color: black;
-    border-color: #20c20e;
-  }
-  
-  .btn:hover {
-    background-color: #20c20e;
-    border-color: black;
-    color: black;
-  }
-  
-  .btn-select{
-    background-color: #20c20e;
-    border-color: black;
-    color: black;
-    font-family: 'Share Tech Mono', monospace;
-    
-  }
-  
-  .jumbotron {
-    text-align: center;
-    background-color: black;
-    padding-bottom: 0px;
-  }
-  
-  body {
-    background-color: black;
-  }
-  
-  .hacker-text {
-    color: #20c20e;
-    font-family: 'Share Tech Mono', monospace;
-  }
-  
-  table,
-  td {
-    border: 1px solid #20c20e;
-    text-align: center;
-    margin: 0 auto;
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-left:20px;
-    padding-right:20px;  
-  }
-  .conditions-container{
-    padding-bottom:20px;
-    padding-top:0px;
-  }
+/* Window */
+.window div {
+    position: absolute;
+    margin-top: 100px;
+    width: 500px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.6);
+    width: 750px;
+    max-width: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 16px;
+    font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+    border-radius: 4px;
+    padding: 60px 30px 20px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
