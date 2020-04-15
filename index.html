@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harbinder_Singh</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="termynal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 <body>
@@ -68,7 +70,96 @@
     </div>
 
     <div class="main">
-        ...
+        <div class="types">
+            <div id="termynal" data-ty-startDelay="600" data-ty-cursor="" >
+            <span data-ty>CISCO IOS Loading...</span>
+            <span data-ty="progress" data-ty-progressChar="#"></span>
+            <span data-ty="input" data-ty-prompt="Router>">enable</span>
+            <span data-ty="input" data-ty-prompt="Router#">hostname Harbinder</span>
+            <span data-ty="input" data-ty-prompt="Router#">config</span>
+            <span data-ty="input" data-ty-prompt="Router(config)#">interface g0/0</span>
+            <span data-ty="input" data-ty-prompt="Router(config-if)#">ip address 192.168.0.1</span>
+            <span data-ty="input" data-ty-prompt="Router(config-if)#">end</span>
+            <span data-ty="input" data-ty-prompt="Router#">write memory</span>
+            </div>
+        </div>
+        <div class="appbuttons">
+            <a href="#">
+                <span>CONTACT ME</span>
+                </a>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="jumbotron hacker-text">
+                  <br>
+                 
+                  <div class="row btn-group btn-container">
+                    <button class="btn hacker-text c-degrees">C&deg;</button>
+                    <button class="btn hacker-text f-degrees">F&deg;</button>
+                  </div>
+          
+                  <div>
+                    <br>
+                    <p class="hacker-text" id="ip-address"></p>
+                  </div>
+           <div>
+                    <br>
+                    <p class="hacker-text" id="hostname"></p>
+                  </div>
+                  <div>
+                    <p class="hacker-text" id="location-data">
+                      <p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="conditions-container row">
+              <div class="col-lg-12">
+                <h2 class="hacker-text" id="conditions">Conditions
+              </h2>
+                <table class="hacker-text">
+          
+                  <tbody>
+                    <tr>
+                      <td id="weather-icon"></td>
+                      <td id="weather"></td>
+                    </tr>
+                    <tr>
+                      <td>Temperature:</td>
+                      <td id="temp"></td>
+                    </tr>
+                    <tr>
+                      <td>Feels Like:</td>
+                      <td id="feels-like"></td>
+                    </tr>
+                    <tr>
+                      <td>Wind:</td>
+                      <td id="wind"></td>
+                    </tr>
+                    <tr>
+                      <td>Wind Gusts:</td>
+                      <td id="gust"></td>
+                    </tr>
+                    <tr>
+                      <td>Humidity:</td>
+                      <td id="humidity"></td>
+                    </tr>
+                    <tr>
+                      <td>Dew Point:</td>
+                      <td id="dew-point"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div </div>
+          </div>
+          
+          
+          </div>
     </div>
+    <script src="termynal.js" data-termynal-container="#termynal"></script>
+    <script src="ip_api.js"></script>
 </body>
 </html>
