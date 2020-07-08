@@ -49,6 +49,21 @@ a {
     vertical-align:baseline;
     background:transparent;
 }
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
 
 ins {
     background-color:#ff9;
@@ -91,19 +106,18 @@ input, select {
 }
 
 /* ---------MY CODE ---------- */
-body {
-    background:rgb(35, 35, 35);
+.bg-main {
+    background:rgb(35, 35, 35); 
 }
 
 .sidenav {
-    height: 100%;
-    width: 100px; 
     position: fixed; 
     z-index: 1;
     margin-top: 0;
     margin-bottom: 0;
     background-color: rgb(29, 29, 29); 
     overflow-x: hidden;
+    height: 100vh;
 }
 
 .social {
@@ -123,8 +137,8 @@ body {
 }
 
 .sidenav a {
+    text-decoration: none; 
     padding: 8px 16px 8px 10px;
-    text-decoration: none;
     font-size: 16px;
     color: #797979;
     display: block;
@@ -134,8 +148,7 @@ body {
   
 
 .sidenav ul {
-    z-index: 1;
-    background-color: rgb(29, 29, 29); 
+    z-index: 1; 
     overflow-x: hidden;
     padding-top: 10px;
     
@@ -152,6 +165,7 @@ body {
     display: block;
 }
 .sidenav li a{
+    text-decoration: none; 
     padding-top: 20px;
     display: block;
 }
@@ -162,11 +176,6 @@ body {
 .active, .btn:hover {
     color: #00f120;
   }
-
-.main {
-    margin-left: 160px; 
-    padding: 0px 10px;
-}
 
 .brand { 
     text-decoration: none;
@@ -258,18 +267,22 @@ svg path{
 
 /* Main body code*/
 .types {
-    position: absolute;
+    min-height: 300px;
+    position: relative;
     margin-top: 100px;
     width: 500px;
+    max-width: 100%;
     box-shadow: 1px 2px 5px rgba(0,0,0,.6);
 }
 
 /*................ Button code*/
 .appbuttons {
     /*overflow: hidden;*/
-    margin-top: 428px;
+    max-width: 100%;
     position: relative;
     display: inline-block;
+    padding: 20px;
+    
 }
 
 .appbuttons a {     
@@ -291,6 +304,7 @@ svg path{
     font-weight: bold;
 }
 .appbuttons a:hover {
+    text-decoration: none;
 	border:2px solid #00f120;
 	transition: all 0.2s ease;
 	-webkit-box-shadow: 0px 0px 15px 5px rgba(9, 255, 0, 0.55);
@@ -314,17 +328,8 @@ svg path{
 }
 
 /* Window */
-.window{
-    position: absolute;
-    margin-top: 50px;
-    width: 500px;
-    box-shadow: 1px 2px 5px rgba(0,0,0,.6);
-    max-width: 100%;
-    background: var(--color-bg);
-    color: var(--color-text);
-}
 
-.window div {
+.window-icon div {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
@@ -336,6 +341,54 @@ svg path{
     color: #00f120;
 }
 
-.window div span{
+.window-icon div span{
     color: #F44336;
+}
+
+.window-icon div p{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+
+.window-icon {
+    min-height: 300px;
+    margin-top: 100px;
+    width: 500px;
+    max-width: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: 16px;
+    font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+    border-radius: 4px;
+    padding: 40px 20px 20px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.6);
+}
+
+.window-icon:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* A little hack to display the window buttons in one pseudo element. */
+    background: #d9515d;
+    -webkit-box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
+            box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
+}
+
+.window-icon:after {
+    content: '';
+    position: absolute;
+    color: var(--color-text-subtle);
+    top: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }

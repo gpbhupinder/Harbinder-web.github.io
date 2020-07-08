@@ -37,7 +37,7 @@ class Termynal {
         this.lineDelay = options.lineDelay
             || parseFloat(this.container.getAttribute(`${this.pfx}-lineDelay`)) || 1500;
         this.progressLength = options.progressLength
-            || parseFloat(this.container.getAttribute(`${this.pfx}-progressLength`)) || 40;
+            || parseFloat(this.container.getAttribute(`${this.pfx}-progressLength`)) || 30;
         this.progressChar = options.progressChar
             || this.container.getAttribute(`${this.pfx}-progressChar`) || '█';
 		this.progressPercent = options.progressPercent
