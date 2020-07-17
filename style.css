@@ -305,7 +305,8 @@ svg path{
 }
 .appbuttons a:hover {
     text-decoration: none;
-	border:2px solid #00f120;
+    border:2px solid #00f120;
+    color: #00f120;
 	transition: all 0.2s ease;
 	-webkit-box-shadow: 0px 0px 15px 5px rgba(9, 255, 0, 0.55);
 	-moz-box-shadow: 0px 0px 15px 5px rgba(21, 255, 0, 0.55);

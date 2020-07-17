@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
     <link rel="manifest" href="ico/site.webmanifest">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="termynal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -38,8 +39,8 @@
                 </div>
                 <div class="row justify-content-md-center">
                     <ul>
-                        <li><a href="#"><i class="icon fa fa-home fa-2x active"></i><b>Home</b></a></li>
-                        <li><a href="/about.html"><i class="icon fa fa-user fa-2x"></i><b>About</b></a></li>
+                        <li><a href="/index.html"><i class="icon fa fa-home fa-2x"></i><b>Home</b></a></li>
+                        <li><a href="#"><i class="icon fa fa-user fa-2x active"></i><b>About</b></a></li>
                         <li><a href="#"><i class="icon fa fa-calculator fa-2x"></i><b>Skills</b></a></li>
                         <li><a href="#"><i class="icon fa fa-television fa-2x"></i><b>Work</b></a></li>
                         <li><a href="#"><i class="icon fa fa-phone fa-2x"></i><b>Contact</b></a></li>
@@ -55,34 +56,24 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="types mx-auto">
-                            <div id="termynal" data-ty-startDelay="600" data-ty-cursor="" >
-                                <span data-ty>CISCO IOS Loading...</span>
-                                <span data-ty="progress" data-ty-progressChar="#"></span>
-                                <span data-ty="input" data-ty-prompt="Router>">enable</span>
-                                <span data-ty="input" data-ty-prompt="Router#">hostname Harbinder</span>
-                                <span data-ty="input" data-ty-prompt="Router#">config</span>
-                                <span data-ty="input" data-ty-prompt="Router(config)#">interface g0/0</span>
-                                <span data-ty="input" data-ty-prompt="Router(config-if)#">ip address 192.168.0.1</span>
-                                <span data-ty="input" data-ty-prompt="Router(config-if)#">end</span>
-                                <span data-ty="input" data-ty-prompt="Router#">write memory</span>
+                <div class="row ">
+                    <div class="col-md-12">
+                            <div class="window-icon mx-start" style="width:auto; min-height: 70%; ">
+                                <div class="text">
+                                    <div class="terminal-window primary-bg" onclick="document.getElementById('dummyKeyboard').focus();">
+                                        <div class="terminal-output" id="terminalOutput">
+                                            <div class="terminal-line">
+                                                <span class="help-msg">Welcome to Harbinder's portfolio — Type <span class="code">help</span> for a list of supported commands.</span>
+                                            </div>
+                                        </div>
+                                        <div class="terminal-line">
+                                                <span class="success">➜</span> <span class="directory">~</span> <span class="user-input"
+                                                        id="userInput"></span><input type="text" id="dummyKeyboard" class="dummy-keyboard">
+                                        </div>
+                                    </div>
+                                </div>                                    
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="window-icon mx-start">
-                            <div id="text">
-                                <p>Little bit about you:</p>
-                                
-                                Your Ip Address : <span class="ip"></span><br>
-                                Your ISP        : <span class="org"></span><br>
-                                Your City       : <span class="city"></span><br>
-                                Your Postal     : <span class="postal"></span>
-                            </div>
-                        </div>
-                    </div>   
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -101,7 +92,7 @@
         </div>
     </div>
 
-<script src="termynal.js" data-termynal-container="#termynal"></script>
+<script src="about.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $.getJSON("https://ipapi.co/json/", function(e) {

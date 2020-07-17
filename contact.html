@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <div class="container-fluid bg-main">
@@ -38,11 +39,11 @@
                 </div>
                 <div class="row justify-content-md-center">
                     <ul>
-                        <li><a href="#"><i class="icon fa fa-home fa-2x active"></i><b>Home</b></a></li>
+                        <li><a href="/index.html"><i class="icon fa fa-home fa-2x"></i><b>Home</b></a></li>
                         <li><a href="/about.html"><i class="icon fa fa-user fa-2x"></i><b>About</b></a></li>
                         <li><a href="#"><i class="icon fa fa-calculator fa-2x"></i><b>Skills</b></a></li>
                         <li><a href="#"><i class="icon fa fa-television fa-2x"></i><b>Work</b></a></li>
-                        <li><a href="#"><i class="icon fa fa-phone fa-2x"></i><b>Contact</b></a></li>
+                        <li><a href="#"><i class="icon fa fa-phone fa-2x active"></i><b>Contact</b></a></li>
                     </ul>
                 </div>
                 <div class="row justify-content-md-center">
@@ -58,16 +59,16 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="types mx-auto">
-                            <div id="termynal" data-ty-startDelay="600" data-ty-cursor="" >
-                                <span data-ty>CISCO IOS Loading...</span>
-                                <span data-ty="progress" data-ty-progressChar="#"></span>
-                                <span data-ty="input" data-ty-prompt="Router>">enable</span>
-                                <span data-ty="input" data-ty-prompt="Router#">hostname Harbinder</span>
-                                <span data-ty="input" data-ty-prompt="Router#">config</span>
-                                <span data-ty="input" data-ty-prompt="Router(config)#">interface g0/0</span>
-                                <span data-ty="input" data-ty-prompt="Router(config-if)#">ip address 192.168.0.1</span>
-                                <span data-ty="input" data-ty-prompt="Router(config-if)#">end</span>
-                                <span data-ty="input" data-ty-prompt="Router#">write memory</span>
+                            <div class="window-icon mx-start">
+                                <div id="text">
+                                    <p>Contact me:</p>
+                                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfXb2QipdxtBk8jHJi2ZpRVAlRbhS2q9RrR1PKf_q8o1jtlOA/formResponse" method="POST">
+                                        Your Name : <input data-initial-value="" type="text" class="feedback-input" placeholder="Name" /><br>
+                                        
+                                        Comment   : <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+                                        <input type="submit" value="SUBMIT" />
+                                      </form>
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -112,6 +113,5 @@
         });
     });
 </script>
-
 </body>
 </html>
