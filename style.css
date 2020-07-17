@@ -393,3 +393,8 @@ svg path{
     width: 100%;
     text-align: center;
 }
+
+/*contact_form*/
+.form-group{
+    margin-bottom: 0rem !important;
+}
