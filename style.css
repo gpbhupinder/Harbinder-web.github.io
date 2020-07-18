@@ -398,3 +398,105 @@ svg path{
 .form-group{
     margin-bottom: 0rem !important;
 }
+
+/*Social Media_contact_page*/
+@import 'http://codepen.io/chrisdothtml/pen/ojLzJK.css';
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+          transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fa {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.social-btns .btn.linkedin:before {
+  background-color: #3b5998;
+}
+.social-btns .btn.linkedin .fa {
+  color: #3b5998;
+}
+.social-btns .btn.at:before {
+  background-color: #ff8533;
+}
+.social-btns .btn.at .fa {
+  color: #ff8533;
+}
+.social-btns .btn.phone:before {
+  background-color: #9317aa;
+}
+.social-btns .btn.phone .fa {
+  color: #9317aa;
+}
+.social-btns .btn.whatsapp:before {
+  background-color: #25D366;
+}
+.social-btns .btn.whatsapp .fa {
+  color: #25D366;
+}
+.social-btns .btn.share-alt:before {
+  background-color: #00aff0;
+}
+.social-btns .btn.share-alt .fa {
+  color: #00aff0;
+}
+.social-btns .btn.heart-o:before {
+    background-color: #e31b23;
+  }
+  .social-btns .btn.heart-o .fa {
+    color: #e31b23;
+  }
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.social-btns {
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.social-btns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  line-height: 70px;
+  margin: 20px 10px 10px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.social-btns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
