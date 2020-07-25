@@ -195,3 +195,4 @@ if (document.currentScript.hasAttribute('data-termynal-container')) {
     containers.split('|')
         .forEach(container => new Termynal(container))
 }
+

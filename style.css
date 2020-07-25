@@ -21,6 +21,7 @@ time, mark, audio, video {
 
 body {
     line-height:1;
+    background:rgb(35, 35, 35) !important;
 }
 
 article,aside,details,figcaption,figure,
@@ -280,9 +281,9 @@ svg path{
     /*overflow: hidden;*/
     max-width: 100%;
     position: relative;
-    display: inline-block;
+    display: block;
     padding: 20px;
-    
+    margin-top: 20px;
 }
 
 .appbuttons a {     
@@ -291,7 +292,7 @@ svg path{
     background-color: #2a2e36;
     box-shadow: 1px 2px 5px rgba(0,0,0,.6);
     position: relative;
-    display: inline-block;
+    display: inline;
     padding: 15px;
     color: #00f120;
     font-size: 16px;
@@ -302,6 +303,7 @@ svg path{
     letter-spacing: 4px;
     font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
     font-weight: bold;
+    
 }
 .appbuttons a:hover {
     text-decoration: none;
@@ -321,12 +323,6 @@ svg path{
 	top:1px;
 }
 
- @media screen and (max-width :675px) {
-.appbuttons {
-	height: 70px;
-	width: 96%;
-}
-}
 
 /* Window */
 
@@ -342,7 +338,7 @@ svg path{
     color: #00f120;
 }
 
-.window-icon div span{
+.red{
     color: #F44336;
 }
 
@@ -500,3 +496,39 @@ svg path{
   font-size: 38px;
   vertical-align: middle;
 }
+
+.noshowmobile{
+  display: block;
+}
+
+.noshowdesk{
+  display: block;
+}
+/*...............................media_queries_FOR_MOBILE*/
+
+@media (min-width: 1px) and (max-width: 991.98px) { 
+  .noshowmobile{
+    display: none !important;
+  } 
+ .types{
+   margin-top: 0px;
+  }
+  [data-termynal]{
+    height: 360px !important;
+  }
+  .window-icon{
+    margin-top: 50px !important;
+  }
+  d{
+    font-size: 3.5rem !important;
+  }
+  .appbuttons{
+    text-align: center !important;
+  }
+ }
+
+@media (min-width: 992px) { 
+  .noshowdesk{
+    display: none !important;
+  }
+ }

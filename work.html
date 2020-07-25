@@ -9,11 +9,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
     <link rel="manifest" href="ico/site.webmanifest">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="termynal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
     <div class="container-fluid bg-main">
@@ -40,9 +51,9 @@
                 <div class="row justify-content-md-center">
                     <ul>
                         <li><a href="/index.html"><i class="icon fa fa-home fa-2x"></i><b>Home</b></a></li>
-                        <li><a href="#"><i class="icon fa fa-user fa-2x active"></i><b>About</b></a></li>
+                        <li><a href="/about.html"><i class="icon fa fa-user fa-2x"></i><b>About</b></a></li>
                         <li><a href="/skills.html"><i class="icon fa fa-calculator fa-2x"></i><b>Skills</b></a></li>
-                        <li><a href="/work.html"><i class="icon fa fa-television fa-2x"></i><b>Work</b></a></li>
+                        <li><a href="#"><i class="icon fa fa-television fa-2x active"></i><b>Work</b></a></li>
                         <li><a href="/contact.html"><i class="icon fa fa-phone fa-2x"></i><b>Contact</b></a></li>
                     </ul>
                 </div>
@@ -56,43 +67,37 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row ">
-                    <div class="col-md-12">
-                            <div class="window-icon mx-start" style="width:auto; min-height: 70%; ">
-                                <div class="text">
-                                    <div class="terminal-window primary-bg" onclick="document.getElementById('dummyKeyboard').focus();">
-                                        <div class="terminal-output" id="terminalOutput">
-                                            <div class="terminal-line">
-                                                <span class="help-msg">Welcome to Harbinder's portfolio — Type <span class="code">help</span> for a list of supported commands.</span>
-                                            </div>
-                                        </div>
-                                        <div class="terminal-line">
-                                                <span class="success">➜</span> <span class="directory">~</span> <span class="user-input"
-                                                        id="userInput"></span><input type="text" id="dummyKeyboard" class="dummy-keyboard">
-                                        </div>
-                                    </div>
-                                </div>                                    
-                            </div>
-                        </div>
-                </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="appbuttons mx-auto">
-                            <a href="/contact.html">
-                                <span>CONTACT ME</span>
-                            </a>
+                        <div class="types mx-auto">
+                            <div class="window-icon mx-start">
+                                <div class="text">
+                                    <p>Skills I have:</p>
+                                    
+                                 </div>
+                            </div>
                         </div>
-                    </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <div class="types mx-auto">
+                        <div class="window-icon mx-start">
+                            <div id="text">
+                                <p>My Social Media Profiles:</p>
+                                
+                            </div>
+                        </div>
+                        </div>
+                    </div>   
                 </div>
+                
             </div>
 
             <div class="col-md-1">
-                
             </div>
         </div>
     </div>
-
-<script src="about.js"></script>
+<script src="/termynal.js" data-termynal-container="#termynal"></script>
+<script src="/xtra.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $.getJSON("https://ipapi.co/json/", function(e) {
@@ -103,6 +108,6 @@
         });
     });
 </script>
-
+<div id="app"></div>
 </body>
 </html>
