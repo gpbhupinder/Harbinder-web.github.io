@@ -513,6 +513,7 @@ svg path{
   } 
  .types{
    margin-top: 0px;
+   width: 100% !important;
   }
   [data-termynal]{
     height: 360px !important;
