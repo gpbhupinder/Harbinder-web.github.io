@@ -166,7 +166,8 @@
                         class="fa fa-whatsapp"></i></a>
                     <a class="btn share-alt" href="#"><i class="fa fa-share-alt"></i></a>
                     <a class="btn heart-o" href="#"><i class="fa fa-heart-o"></i></a>
-					<p><button>Share MDN!</button></p>
+					<p><button class="sharing">Share MDN!</button></p>
+					<p class="result"></p>
                   </div>
                 </div>
               </div>
@@ -239,7 +240,7 @@
         url: 'https://developer.mozilla.org',
       }
 
-      const btn = document.querySelector('button');
+      const btn = document.querySelector('.sharing');
       const resultPara = document.querySelector('.result');
 
       btn.addEventListener('click', () => {
