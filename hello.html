@@ -2,28 +2,26 @@
 <title>
     Web Share API
 </title>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+</head>
 <body>
     <div>
-        <input type="text" placeholder="Enter text you wanna share" id="title" />
-        <input type="text" placeholder="Enter the text you want to share here" id="text" />
-        <input type="text" placeholder="Enter the URL" id="url" />
-        <button onclick="share">Share</button>
+        <button onclick="share" type="button" class="btn btn-primary">Primary</button>
     </div>
 </body>
 <script>
     function share() {
         if (navigator.share) {
-            navigator.share({
-                    title: title.value,
-                    text: text.value,
-                    url: url.value,
-                })
-                .then(() => console.log('Successful share'))
-                .catch((error) => console.log('Error sharing', error));
-        } else {
-            console.log("Web Share API is not supported in your browser.")
-        }
+  navigator.share({
+    title: 'web.dev',
+    text: 'Check out web.dev.',
+    url: 'https://web.dev/',
+  })
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing', error));
+}
     }
 </script>
 </html>
