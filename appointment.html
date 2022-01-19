@@ -116,22 +116,22 @@
             <div class="types">
               <div class="window-icon mx-start">
                 <div id="text">
-                  <p>Contact me:</p>
+                  <p>Book an appointment:</p>
                   <form id="form" target="_self" onsubmit="" action="javascript: postToGoogle()">
                     <div class="form-group">
-                      <label for="exampleInputName1">What should I call you</label>
+                      <label for="exampleInputName1">Your Name</label>
                       <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Your Name"
                         required>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Where should I contact you</label>
+                      <label for="exampleInputEmail1">Your Email Id</label>
                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         name="email" placeholder="Email Id" required>
                       <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone
                         else.</small>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputComment1">Whats on your mind!</label>
+                      <label for="exampleInputComment1">Reason for appointment</label>
                       <textarea class="form-control" id="exampleInputComment1" name="comment" placeholder="Your Message"
                         required></textarea>
                     </div>
@@ -144,36 +144,12 @@
             </div>
           </div>
           <div class="col-md-6 pb-3">
-            <div class="types mx-auto">
-              <div class="window-icon mx-start">
-                <div id="text">
-                  <p>My Social Media Profiles:</p>
-                  <div class="social-btns">
-                    <a class="btn linkedin" href="https://www.linkedin.com/in/harbinder5ingh/"><i
-                        class="fa fa-linkedin"></i></a>
-                    <a class="btn at" href="mailto:harbindersidhu@ymail.com?subject=Your Website is awesome!"><i
-                        class="fa fa-at"></i></a>
-                    <a class="btn phone" href="tel:+1-204-809-7588"><i class="fa fa-phone"></i></a>
-                    <a class="btn whatsapp"
-                      href="https://wa.me/12897726048?text=Hi Harbinder. I just visited your website and It looks awesome!"><i
-                        class="fa fa-whatsapp"></i></a>
-                    <a class="btn share-alt sharing" href="#"><i class="fa fa-share-alt"></i></a>
-                    <a class="btn heart-o" href="#"><i class="fa fa-heart-o"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="appbuttons" style="padding: 35px;">
-                <a href="/appointment.html">
-                  <span>Book Appointment</span>
-                </a>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <script type="text/javascript">
     $(document).ready(function () {
@@ -227,26 +203,7 @@
     */
 
   </script>
-  <script>
-    let shareData = {
-      title: 'Harbinder\'s Website',
-      text: 'Have a look at this website! It looks cool! Contact him to build one for yourself.',
-      url: 'https://harbinder.me',
-    }
 
-    const btn = document.querySelector('.sharing');
-    const resultPara = document.querySelector('.result');
-
-    btn.addEventListener('click', () => {
-      navigator.share(shareData)
-        .then(() =>
-          resultPara.textContent = 'shared successfully'
-        )
-        .catch((e) =>
-          resultPara.textContent = 'Error: ' + e
-        )
-    });
-  </script>
 </body>
 
 </html>
